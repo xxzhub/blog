@@ -1,0 +1,1 @@
+import{_ as s,o as n,c as a,N as l}from"./chunks/framework.3c3fafec.js";const A=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"views/TS/类型安全保护.md","lastUpdated":null}'),p={name:"views/TS/类型安全保护.md"},o=l("",30),e=[o];function t(r,c,y,F,D,i){return n(),a("div",null,e)}const b=s(p,[["render",t]]);export{A as __pageData,b as default};

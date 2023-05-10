@@ -1,0 +1,1 @@
+import{_ as s,o as n,c as a,N as l}from"./chunks/framework.3c3fafec.js";const A=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"views/TS/类型工具.md","lastUpdated":null}'),p={name:"views/TS/类型工具.md"},o=l("",51),e=[o];function r(c,t,y,C,F,i){return n(),a("div",null,e)}const b=s(p,[["render",r]]);export{A as __pageData,b as default};
