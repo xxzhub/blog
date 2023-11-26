@@ -1,1 +1,0 @@
-import{_ as e,o as t,c as a}from"./chunks/framework.3c3fafec.js";const _=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"views/summary/README.md","lastUpdated":null}'),s={name:"views/summary/README.md"};function r(o,n,c,m,p,d){return t(),a("div")}const l=e(s,[["render",r]]);export{_ as __pageData,l as default};
