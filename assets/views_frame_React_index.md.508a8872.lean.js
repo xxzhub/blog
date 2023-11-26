@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as a}from"./chunks/framework.3c3fafec.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"views/frame/React/index.md","lastUpdated":null}'),r={name:"views/frame/React/index.md"};function n(s,c,o,d,i,p){return t(),a("div")}const f=e(r,[["render",n]]);export{m as __pageData,f as default};
