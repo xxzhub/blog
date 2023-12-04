@@ -17,8 +17,6 @@ jobs:
               uses: actions/setup-node@v3
               with:
                   node-version: "14.x"  # 指定你的node版本
-            - run: npm install
-            - run: npm run build
             - name: TranslateFile
               # uses: wangyucode/sftp-upload-action@24f8bb83383dc39bed201ee5da01475e6c38c568
               uses: wangyucode/sftp-upload-action@v1.1
