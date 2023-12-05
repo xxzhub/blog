@@ -17,13 +17,27 @@ jobs:
               uses: actions/setup-node@v3
               with:
                   node-version: "14.x"  # 指定你的node版本
-            - name: TranslateFile
-              # uses: wangyucode/sftp-upload-action@24f8bb83383dc39bed201ee5da01475e6c38c568
-              uses: wangyucode/sftp-upload-action@v1.1
-              with:
-                  host: ${{ secrets.SERVER_IP }} #你的nginx服务器公网ip
-                  port: ${{ secrets.SERVER_PORT }} #你的nginx服务器ssh端口
-                  username: ${{ secrets.USERNAME }} #你的nginx服务器用户名
-                  password: ${{ secrets.PASSWORD }} #你的nginx服务器密码
-                  localDir: "dist" #你vue项目build好的文件的路径,每次服务器上会自动删除对应的文件夹后重新覆盖
-                  remoteDir: ${{ secrets.SERVER_DESTINATION }} #你要把你build好的文件夹放到nginx服务器上的什么位置，一般都是nginx配置的站点路径
+            # 安装依赖
+            - name: yarn install
+              run: yarn install
+            # 打包
+            - name: build
+              run: yarn run docs:build
+              
+            #部署到服务器
+            - name: Deploy to Staging My server
+              uses: easingthemes/ssh-deploy@v2.1.6
+              env:
+                #私钥
+                SSH_PRIVATE_KEY: ${{ secrets.MY_SERVER_PRIVATE_KEY }} #后面指定为该仓库配置的私钥
+                ARGS: "-rltgoDzvO"
+                # 源目录，编译后生成的文件目录
+                SOURCE: '/dist/'
+                #服务器公网地址
+                REMOTE_HOST: '47.108.95.38'
+                #服务器用户名-一般默认root
+                REMOTE_USER: 'root'
+                #服务器中，代码部署的位置
+                TARGET: '/www/client/daohang/'
+                #去除的文件
+                EXCLUDE: "/dist/, /node_modules/" 
