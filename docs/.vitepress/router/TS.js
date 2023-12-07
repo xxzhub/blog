@@ -12,6 +12,7 @@ export default  TsRouter = [
       { text: '类型工具', link: '/views/TS/类型工具' },
       { text: '类型安全保护', link: '/views/TS/类型安全保护' },
       { text: '无处不在的泛型', link: '/views/TS/无处不在的泛型' },
+      { text: '内置工具类型基础', link: '/views/TS/工具类型' },
     ]
   }
 ]
